@@ -12,7 +12,7 @@ const NewProject = () => {
         project.cost = 0
         project.services = []
 
-        fetch("http://localhost:5000/projects"  , {
+        fetch("https://jsonserver-pi.vercel.app/projects", {
             method: 'POST' ,
             headers: {
                 'Content-type': 'application/json',
@@ -21,10 +21,10 @@ const NewProject = () => {
         }).then((resp) => resp.json()) 
         .then((data) => {
             console.log(data)
-            history('/project' ,{ state: {message:'projeto criado com sucesso'}})
         })
         .catch(err  => console.log(err))
-     }
+        history('/project' ,{ state: {message:'projeto criado com sucesso'}})
+    }
 
     return (
         <div className= {styles.newproject_container} >

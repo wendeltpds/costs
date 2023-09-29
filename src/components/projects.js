@@ -23,7 +23,7 @@ const Projects = () => {
 
     useEffect(() => {
         setTimeout (() => { 
-       fetch('http://localhost:5000/projects' , {
+       fetch('https://jsonserver-pi.vercel.app/projects' , {
         method: 'GET' ,
         headers: {
             'content-type': 'application/json'
@@ -38,7 +38,7 @@ const Projects = () => {
     }, [])
 
     function removeproject(id) {
-        fetch(`http://localhost:5000/projects/${id}` , {
+        fetch(`https://jsonserver-pi.vercel.app/projects/${id}` , {
             method: 'DELETE' ,
             headers: {
                 'Contet-Type': 'application/json'

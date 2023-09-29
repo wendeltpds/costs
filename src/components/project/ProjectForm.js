@@ -13,7 +13,7 @@ const ProjectForm = ({ handlesubmit , btntext , projectdata}) => {
     const [project , setproject] = useState(projectdata || {} )
 
     useEffect(() => {
-        fetch("http://localhost:5000/categories" , {
+        fetch("https://jsonserver-pi.vercel.app/categories" , {
             method: "GET",
             headers: {
                 'content-type': 'aplication/json'
@@ -25,7 +25,6 @@ const ProjectForm = ({ handlesubmit , btntext , projectdata}) => {
 
     const submit = (e) => {
         e.preventDefault()
-        //console.log(submit)
         handlesubmit(project)
     }
 

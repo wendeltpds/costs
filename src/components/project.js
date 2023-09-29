@@ -17,7 +17,7 @@ function Project() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`http://localhost:5000/projects/${id}` , {
+            fetch(`https://jsonserver-pi.vercel.app/projects/${id}` , {
                 method:'GET',
                 headers: {
                     'Content-Type': 'application/json',
